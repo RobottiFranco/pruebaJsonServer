@@ -1,0 +1,14 @@
+{
+    "users": [
+      {
+        "name": "John",
+        "lastName": "Doe",
+        "email": "John@yopmail.com"
+      },
+      {
+        "name": "Juan",
+        "lastName": "Martinez",
+        "email": "Juan@yopmail.com"
+      }
+    ]
+  }

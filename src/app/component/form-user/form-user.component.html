@@ -1,0 +1,26 @@
+<section>
+    <form [formGroup]="creationForm" (submit)="submitUser()">
+        <label for="name"></label>
+        <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Enter a name"
+      />
+      <label for="lastName"></label>
+      <input
+      id="lastName"
+      type="text"
+      formControlName="lastName"
+      placeholder="Enter a lastName"
+    />
+    <label for="email"></label>
+    <input
+    id="email"
+    type="text"
+    formControlName="email"
+    placeholder="Enter a name"
+    />
+    <button type="submit">Submit</button>
+    </form>
+</section>
