@@ -17,12 +17,22 @@ export class FormUserComponent {
     lastName: new FormControl(),
   });
 
+  ngOnInit() {
+    this.creationForm.setValue({
+      name: this.user?.name ?? '',
+      email: this.user?.email ?? '',
+      lastName: this.user?.lastName ?? '',
+    });
+  }
+
   constructor(private userService: UserService) {}
 
   submitUser() {
     const { name, email, lastName } = this.creationForm.value;
     const user: User = { name, email, lastName, id: 0 };
 
-    this.userService.postUser(user);
+    this.userService.postUser(user).then((result) => {
+      if (result) location.reload()
+    });
   }
 }
